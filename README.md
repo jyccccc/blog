@@ -3,10 +3,11 @@
 [项目持续更新...]
 
 ## 使用到的技术
-spring boot
-spring mvc
-thymeleaf
-mysql
+- spring boot
+- spring mvc
+- thymeleaf
+- mysql
+- bootstrap
 
 ## 工具
 idea
