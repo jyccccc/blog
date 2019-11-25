@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <script src="js/bootstrap.min.js" type="application/javascript"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <nav class="navbar navbar-default">
@@ -44,5 +45,52 @@
             </div>
         </div>
     </nav>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-8 col-sm-8 col-xs-8 col-lg-8">
+                <!-- passpages -->
+                <ol th:each="passage:${passages}">
+                    <li>
+                        <h2 th:text="${passage.title}"></h2>
+                        <p th:text="${passage.description}"></p>
+                        <p th:text="${passage.time}"></p>
+                    </li>
+                </ol>
+                <!-- page helper -->
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- featured passpages -->
+            <div class="col-md-4 col-sm-4 col-xs-4 col-lg-4">
+                <h3> 精选文章 </h3>
+                <ol th:each="featuredPassage:${featuredPassages}">
+                    <li>
+                        <h2 th:text="${featuredPassage.title}"></h2>
+                        <p th:text="${featuredPassage.description}"></p>
+                        <p th:text="${featuredPassage.time}"></p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
